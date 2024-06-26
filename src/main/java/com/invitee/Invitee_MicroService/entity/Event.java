@@ -5,14 +5,13 @@ import com.invitee.Invitee_MicroService.utills.ApiConstants;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.UUID;
 
 @Entity
 public class Event {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    private int id;
     @Column(length = 20,nullable = false)
     private String name;
 
@@ -33,7 +32,7 @@ public class Event {
     public Event() {
     }
 
-    public Event(UUID id, String name, String address, String photoUrls, String date, String contactUs, String mapLocation, Invitee invitee) {
+    public Event(int id, String name, String address, String photoUrls, String date, String contactUs, String mapLocation, Invitee invitee) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -44,11 +43,11 @@ public class Event {
         this.invitee = invitee;
     }
 
-    public UUID getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(int id) {
         this.id = id;
     }
 

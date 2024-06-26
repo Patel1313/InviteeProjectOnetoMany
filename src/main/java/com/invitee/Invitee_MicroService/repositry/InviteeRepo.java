@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 import java.util.UUID;
 
-public interface InviteeRepo extends JpaRepository<Invitee, UUID> {
+public interface InviteeRepo extends JpaRepository<Invitee, Integer> {
 }

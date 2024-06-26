@@ -7,14 +7,13 @@ import lombok.*;
 
 import java.security.PrivateKey;
 import java.util.List;
-import java.util.UUID;
 
 @Entity
 public class Invitee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    private int id;
 
     @Column(length = 25,nullable = false)
     private String inviteeSurName;
@@ -54,7 +53,7 @@ public class Invitee {
     public Invitee() {
     }
 
-    public Invitee(UUID id, String inviteeSurName, InviteeTypes inviteeTypes, String heroName, String heroineName, String heroFatherAndMotherNames, String heroineFatherAndMotherNames, List<Event> event) {
+    public Invitee(int id, String inviteeSurName, InviteeTypes inviteeTypes, String heroName, String heroineName, String heroFatherAndMotherNames, String heroineFatherAndMotherNames, List<Event> event) {
         this.id = id;
         this.inviteeSurName = inviteeSurName;
         this.inviteeTypes = inviteeTypes;
@@ -65,11 +64,11 @@ public class Invitee {
         this.event = event;
     }
 
-    public UUID getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(int id) {
         this.id = id;
     }
 

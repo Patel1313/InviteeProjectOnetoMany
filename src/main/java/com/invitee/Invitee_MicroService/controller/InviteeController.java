@@ -45,8 +45,6 @@ public class InviteeController {
 //    }
     @PostMapping("/save")
     public Invitee saveInvitee(@RequestBody Invitee invitee){
-        //employeeModel.getEmployeeModelLogging().forEach(lm -> lm.setLoggingEmployeeModel(employeeModel);
-        eventRepo.saveAll(invitee.getEvent());
         return inviteeRepo.save(invitee);
     }
 
